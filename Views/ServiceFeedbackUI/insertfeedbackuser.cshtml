@@ -1,0 +1,290 @@
+﻿@model HSP_Models.Models.ServiceFeedback
+
+@{
+    ViewData["Title"] = "insertfeedbackuser";
+}
+
+
+<!--<div class="row">
+    <div class="col-md-4">
+        <form asp-action="insertfeedbackuser" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Uid" class="control-label"></label>-->
+@*<select asp-for="Uid" class ="form-control" asp-items="ViewBag.Uid"></select>*@
+<!--<input type="text" asp-for="Uid" class ="form-control" asp-items="ViewBag.Uid" />
+</div>
+<div class="form-group">
+    <label asp-for="CustomerName" class="control-label"></label>
+    <input asp-for="CustomerName" class="form-control" />
+    <span asp-validation-for="CustomerName" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="OrderId" class="control-label"></label>-->
+@*<select asp-for="OrderId" class ="form-control" asp-items="ViewBag.OrderId"></select>*@
+<!--<input type="text" asp-for="OrderId" class ="form-control" asp-items="ViewBag.OrderId"/>
+</div>
+<div class="form-group">
+    <label asp-for="Spid" class="control-label"></label>-->
+@*<select asp-for="Spid" class ="form-control" asp-items="ViewBag.Spid"></select>*@
+<!--<input type="text" asp-for="Spid" class ="form-control" asp-items="ViewBag.Spid"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ratings" class="control-label"></label>
+                <input asp-for="Ratings" class="form-control" />
+                <span asp-validation-for="Ratings" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Service | User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="all">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="~//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/sidenav.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        /* * {
+            box-sizing: border-box;
+        }*/
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        /* .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }*/
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+       
+    </style>
+</head>
+<body>
+    <header>
+        <!-- header -->
+        <div class="header-w3l">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">Home Service</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("ShowAll", "Home")" font-color:"white">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("showuserbyid","CustomerdetailsUI")">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("showSPdetails","ServiceProvidedUI")">Services </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="@Url.Action("insertfeedbackuser","ServiceFeedbackUI")">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")">logout </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+            <!-- //header -->
+            <!-- banner -->
+            <!-- banner-slider -->
+
+
+
+
+
+            <div class="w3l_banner_info">
+                <div class="slider1">
+                    <div class="callbacks_container">
+                        <ul class="rslides" id="slider3">
+                            <li>
+                                <div class="slider1-img">
+                                    <div class="slider_banner_info">
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //banner-slider -->
+        </div>
+    </header>
+
+    <div class="container1">
+        <form asp-action="insertfeedbackuser" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname"> Uid</label>
+                </div>
+                <div class="col-25">
+                    <input type="text" asp-for="Uid" class ="form-control" id="fname" placeholder="Enter UId" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Customer Name</label>
+                </div>
+                <div class="col-25">
+                    <input type="text" asp-for="CustomerName" class="form-control" id="lname" placeholder="Enter Your Name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">OrderId</label>
+                </div>
+                <div class="col-25">
+                    <input type="text" asp-for="OrderId" class ="form-control" id="lname" placeholder="Enter OrderId" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Spid</label>
+                </div>
+                <div class="col-25">
+                    <input type="text" asp-for="OrderId" class ="form-control" id="lname" placeholder="Enter Spid" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-25">
+                    <textarea id="subject" asp-for="Description" class="form-control" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Ratings</label>
+                </div>
+                <div class="col-25">
+                    <input type="text" asp-for="Ratings" class="form-control" placeholder="Enter Rating" required>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <!-- Footer-->
+    <section class="footer">
+        <div class="container">
+            <h3>Home Service</h3>
+            <div class="wrapper">
+                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                    <li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li> <a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2021 Capgemini Service. All Rights Reserved | Design by <a href="https://capgemini.com/">Capgemini</a></p>
+
+            </div>
+        </div>
+    </section>
+    <!-- /Footer-->
+    <!-- //bootstrap-pop-up for login and register-->
+
+    <script src="~/js/jquery.min.v3.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/move-top.js"></script>
+    <script src="~/js/easing.js"></script>
+    <script src="~/js/SmoothScroll.min.js"></script>
+
+
+
+
+</body>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

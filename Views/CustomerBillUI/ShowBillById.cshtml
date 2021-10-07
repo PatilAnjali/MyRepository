@@ -1,0 +1,42 @@
+﻿@model HSP_Models.Models.CustomerBill
+
+@{
+    ViewData["Title"] = "ShowBillById";
+}
+
+<h1>ShowBillById</h1>
+
+<div>
+    <h4>CustomerBill</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer_ID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Customer_ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.servicetype)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.servicetype)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cost)
+        </dd>
+    </dl>
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.bill_number">Edit</a> |*@
+    <a asp-action="showAllBilldetails">Back to List</a>
+</div>

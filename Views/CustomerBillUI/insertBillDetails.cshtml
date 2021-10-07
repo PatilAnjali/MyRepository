@@ -1,0 +1,45 @@
+﻿@model HSP_Models.Models.CustomerBill
+
+@{
+    ViewData["Title"] = "insertBillDetails";
+}
+
+<h1>insertBillDetails</h1>
+
+<h4>CustomerBill</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="insertBillDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Customer_ID" class="control-label"></label>
+                <input asp-for="Customer_ID" class="form-control" />
+                <span asp-validation-for="Customer_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="servicetype" class="control-label"></label>
+                <input asp-for="servicetype" class="form-control" />
+                <span asp-validation-for="servicetype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cost" class="control-label"></label>
+                <input asp-for="cost" class="form-control" />
+                <span asp-validation-for="cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

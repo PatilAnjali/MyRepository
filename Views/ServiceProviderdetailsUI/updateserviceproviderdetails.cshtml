@@ -1,0 +1,51 @@
+﻿@model HSP_Models.Models.ServiceProviderDetail
+
+@{
+    ViewData["Title"] = "updateserviceproviderdetails";
+}
+
+<h1>updateserviceproviderdetails</h1>
+
+<h4>ServiceProviderDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="updateserviceproviderdetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Spid" />
+            <div class="form-group">
+                <label asp-for="SpuserName" class="control-label"></label>
+                <input asp-for="SpuserName" class="form-control" />
+                <span asp-validation-for="SpuserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spaddress" class="control-label"></label>
+                <input asp-for="Spaddress" class="form-control" />
+                <span asp-validation-for="Spaddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="control-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spemail" class="control-label"></label>
+                <input asp-for="Spemail" class="form-control" />
+                <span asp-validation-for="Spemail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,76 @@
+﻿@model HSP_Models.Models.CustomerOrder
+
+@{
+    ViewData["Title"] = "updateCustomerOrder";
+}
+
+<h1>updateCustomerOrder</h1>
+
+<h4>CustomerOrder</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="updateCustomerOrder">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OrderId" />
+            <div class="form-group">
+                <label asp-for="Uid" class="control-label"></label>
+                <select asp-for="Uid" class="form-control" asp-items="ViewBag.Uid"></select>
+                @*<span asp-validation-for="Uid" class="text-danger"></span>*@
+                <input asp-validation-for="Uid" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Spid" class="control-label"></label>
+                <select asp-for="Spid" class="form-control" asp-items="ViewBag.Spid"></select>
+                @*<span asp-validation-for="Spid" class="text-danger"></span>*@
+                <input asp-validation-for="Spid" class="text-danger"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="OserviceRequired" class="control-label"></label>
+                <input asp-for="OserviceRequired" class="form-control" />
+                <span asp-validation-for="OserviceRequired" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oarea" class="control-label"></label>
+                <input asp-for="Oarea" class="form-control" />
+                <span asp-validation-for="Oarea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ocity" class="control-label"></label>
+                <input asp-for="Ocity" class="form-control" />
+                <span asp-validation-for="Ocity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ostate" class="control-label"></label>
+                <input asp-for="Ostate" class="form-control" />
+                <span asp-validation-for="Ostate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OphoneNumber" class="control-label"></label>
+                <input asp-for="OphoneNumber" class="form-control" />
+                <span asp-validation-for="OphoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ObookingDate" class="control-label"></label>
+                <input asp-for="ObookingDate" class="form-control" />
+                <span asp-validation-for="ObookingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ostatus" class="control-label"></label>
+                <input asp-for="Ostatus" class="form-control" />
+                <span asp-validation-for="Ostatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="showServiceProviderdetails">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

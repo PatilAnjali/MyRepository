@@ -1,0 +1,69 @@
+﻿@model HSP_Models.Models.ServicesProvided
+
+@{
+    ViewData["Title"] = "updateServiceProvideddetails";
+}
+
+<h1>updateServiceProvideddetails</h1>
+
+<h4>ServicesProvided</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="updateServiceProvideddetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ServiceId" />
+            <div class="form-group">
+                <label asp-for="Spid" class="control-label"></label>
+                <select asp-for="Spid" class="form-control" asp-items="ViewBag.Spid"></select>
+                <span asp-validation-for="Spid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceProviderName" class="control-label"></label>
+                <input asp-for="ServiceProviderName" class="form-control" />
+                <span asp-validation-for="ServiceProviderName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicetype" class="control-label"></label>
+                <input asp-for="Servicetype" class="form-control" />
+                <span asp-validation-for="Servicetype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostPerhour" class="control-label"></label>
+                <input asp-for="CostPerhour" class="form-control" />
+                <span asp-validation-for="CostPerhour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Area" class="control-label"></label>
+                <input asp-for="Area" class="form-control" />
+                <span asp-validation-for="Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="control-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="showSPdetails">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

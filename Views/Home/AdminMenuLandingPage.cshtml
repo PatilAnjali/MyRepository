@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "AdminMenuLandingPage";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Service | Admin</title>
+    <link rel="shortcut icon" href="~/image/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="all">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="~//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/sidenav.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <header>
+        <!-- header -->
+        <div class="header-w3l">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">Home Service</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("AdminMenuLandingPage","Home")" font-color:"white">Home </a>
+                        </li>
+                        <!--<li class="nav-item">
+        <a class="nav-link" href="">View Service Provider  Profile</a>
+    </li>-->
+                        
+                        <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            View Profile by ID
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="">Customer</a>
+            <a class="dropdown-item" href="">Service Provider</a>
+
+        </div>
+    </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("showuserdetails","CustomerdetailsUI")">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("showSPdetails","ServiceProvidedUI")">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="@Url.Action("showServiceProviderdetails","CustomerOrderUI")">Service History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="@Url.Action("showuserdetails","ServiceFeedbackUI")">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="@Url.Action("Index","Home")">Logout</a>
+                        </li>
+
+
+</nav>
+            <div class="w3l_banner_info">
+                <div class="slider1">
+                    <div class="callbacks_container">
+                        <ul class="rslides" id="slider3">
+                            <li>
+                                <div class="slider1-img">
+                                    <div class="slider_banner_info">
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //banner-slider -->
+        </div>
+    </header>
+
+
+    <h1> WELCOME ADMIN</h1>
+
+</body>
+</html>
